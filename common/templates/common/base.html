@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}- weight app</title>
+    <link rel="stylesheet" href="{% static 'common/style.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+<div class="container">
+{#    <nav>#}
+{#        <ul class="nav">#}
+{#        </ul>#}
+{#    </nav>#}
+    <header>
+        {% block header %}{% endblock %}
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>all rights reserved</p>
+    </footer>
+</div>
+</body>
+</html>

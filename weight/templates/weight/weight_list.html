@@ -1,0 +1,87 @@
+{% extends 'common/base.html' %}
+{% block header %}
+<h2>weight data</h2>
+{% endblock %}
+{% block content %}
+    {% include 'weight/include_weight_form.html' %}
+<div id="app"></div>
+<div class="row">
+    <span class="column-10">
+        week day
+    </span>
+    <span class="column-5">
+        date
+    </span>
+    <span class="column-10">
+        old weight
+    </span>
+    <span class="column-10">
+        new weight
+    </span>
+</div>
+{% for item in weights %}
+<div class="row">
+    <span class="column-10{% if item.date.isoweekday == 5 %} bold{% endif %}">
+        {{ item.date|date:"l" }}
+    </span>
+    <span class="column-5{% if item.date.isoweekday == 5 %} bold{% endif %}">
+        {{ item.date|date:"j/n/y" }}
+    </span>
+    <span class="column-10{% if item.date.isoweekday == 5 %} bold{% endif %}">
+        {{ item.old_weight }}
+    </span>
+    <span class="column-10{% if item.date.isoweekday == 5 %} bold{% endif %}">
+{% if item.new_weight %}
+        {{ item.new_weight }}
+{% endif %}
+    </span>
+    <span class="column-5">
+        <a href="{% url 'weight_update' item.id %} ">edit</a>
+    </span>
+</div>
+{% endfor %}
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            old_weight: {},
+            new_weight: {}
+        },
+        created () {
+            fetch('/get_weights')
+                .then(response => response.json())
+                .then(json => {
+                    this.old_weight = json.old_weight;
+                    this.new_weight = json.new_weight;
+
+                    var data = [this.old_weight, this.new_weight];
+                    var grid_color = '#555';
+                    var font_color = '#FFF';
+
+                    var layout = {
+                        plot_bgcolor: '#444',
+                        paper_bgcolor: '#222',
+                        xaxis: {
+                            gridcolor: grid_color,
+                            tickfont: {
+                                color: font_color
+                            }
+                        },
+                        yaxis: {
+                            gridcolor: grid_color,
+                            tickfont: {
+                                color: font_color
+                            }
+                        },
+                        legend: {
+                            font: {
+                                color: font_color
+                            }
+                        }
+                    };
+                    Plotly.newPlot('app', data, layout);
+                })
+        }
+     });
+</script>
+{% endblock %}
