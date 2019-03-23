@@ -1,3 +1,5 @@
+import logging
+
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
@@ -6,6 +8,8 @@ from django.views.generic import View, ListView, CreateView, UpdateView
 
 from weight.forms import WeightForm
 from weight.models import Weight
+
+logger = logging.getLogger(__name__)
 
 
 # @method_decorator(login_required, name='dispatch')
@@ -16,6 +20,7 @@ class WeightView(ListView):
     ordering = '-date'
 
     def get_context_data(self, *, object_list=None, **kwargs):
+        logger.info('got to get_context')
         context = super().get_context_data(**kwargs)
         context['form'] = WeightForm()
         return context
