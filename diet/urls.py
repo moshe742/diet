@@ -13,9 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
+from diet import settings
 from weight.views import WeightView, WeightCreate, WeightUpdate, WeightDataView
 
 urlpatterns = [
@@ -24,4 +26,4 @@ urlpatterns = [
     path('get_weights/', WeightDataView.as_view(), name='weight_graph'),
     path('weights/form/<int:pk>/', WeightUpdate.as_view(), name='weight_update'),
     path('weights/form/', WeightCreate.as_view(), name='weight_add'),
-]
+] + static(settings.STATIC_ROOT)
