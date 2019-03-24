@@ -613,3 +613,7 @@ a:visited {
 .capitalize {
     text-transform: capitalize;
 }
+
+.bold {
+    font-weight: bolder;
+}
