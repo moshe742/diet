@@ -1,0 +1,9 @@
+{% block content %}
+    <h2>delete weight</h2>
+    <form action="{% url 'weight_delete' object.id %}" method="post">{% csrf_token %}
+        <p>are you sure you want to delete the weight on date {{ weight.date }} with old weight {{ weight.old_weight }}
+            and new weight {{ object.new_weight }}?</p>
+        <button type="submit">submit</button>
+        <button type="button">cancel</button>
+    </form>
+{% endblock %}

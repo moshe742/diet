@@ -21,6 +21,9 @@
 </div>
 {% for item in weights %}
 <div class="row">
+    <span class="column-5">
+        <a href="{% url 'weight_delete' item.id %}">delete</a>
+    </span>
     <span class="column-10{% if item.date.isoweekday == 5 %} bold{% endif %}">
         {{ item.date|date:"l" }}
     </span>

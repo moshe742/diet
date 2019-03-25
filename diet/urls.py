@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 
 from diet import settings
-from weight.views import WeightView, WeightCreate, WeightUpdate, WeightDataView
+from weight.views import WeightView, WeightCreate, WeightUpdate, WeightDataView, WeightDelete
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +26,5 @@ urlpatterns = [
     path('get_weights/', WeightDataView.as_view(), name='weight_graph'),
     path('weights/form/<int:pk>/', WeightUpdate.as_view(), name='weight_update'),
     path('weights/form/', WeightCreate.as_view(), name='weight_add'),
+    path('weights/delete/<int:pk>/', WeightDelete.as_view(), name='weight_delete'),
 ] + static(settings.STATIC_ROOT)
