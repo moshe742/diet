@@ -387,6 +387,14 @@ input {
     margin: 5px 10px;
 }
 
+input:focus {
+    border: aqua 1px solid;
+}
+
+input:invalid {
+    border: #cc2f2e;
+}
+
 button {
     padding: 7px 14px;
     margin: 10px 20px;
@@ -394,13 +402,15 @@ button {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    display: block;
+    color: steelblue;
+    background-color: black;
     padding: 10px 20px;
     text-transform: capitalize;
 }
 
 a {
     color: aqua;
+    background-color: black;
     text-decoration: none;
 }
 
@@ -421,7 +431,7 @@ a:visited {
 .column-5 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 5%;
     min-width: 55px;
@@ -430,7 +440,7 @@ a:visited {
 .column-10 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 10%;
     min-width: 110px;
@@ -439,7 +449,7 @@ a:visited {
 .column-15 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 15%;
     min-width: 165px;
@@ -448,7 +458,7 @@ a:visited {
 .column-20 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 20%;
     min-width: 220px;
@@ -457,7 +467,7 @@ a:visited {
 .column-25 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 25%;
     min-width: 275px;
@@ -466,7 +476,7 @@ a:visited {
 .column-30 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 30%;
     min-width: 330px;
@@ -475,7 +485,7 @@ a:visited {
 .column-35 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 35%;
     min-width: 385px;
@@ -484,7 +494,7 @@ a:visited {
 .column-40 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 40%;
     min-width: 440px;
@@ -493,7 +503,7 @@ a:visited {
 .column-45 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 45%;
     min-width: 495px;
@@ -502,7 +512,7 @@ a:visited {
 .column-50 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 50%;
     min-width: 550px;
@@ -511,7 +521,7 @@ a:visited {
 .column-55 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 55%;
     min-width: 605px;
@@ -520,7 +530,7 @@ a:visited {
 .column-60 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 60%;
     min-width: 660px;
@@ -529,7 +539,7 @@ a:visited {
 .column-65 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 65%;
     min-width: 715px;
@@ -538,7 +548,7 @@ a:visited {
 .column-70 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 70%;
     min-width: 770px;
@@ -547,7 +557,7 @@ a:visited {
 .column-75 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 75%;
     min-width: 825px;
@@ -556,7 +566,7 @@ a:visited {
 .column-80 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 80%;
     min-width: 880px;
@@ -565,7 +575,7 @@ a:visited {
 .column-85 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 85%;
     min-width: 935px;
@@ -574,7 +584,7 @@ a:visited {
 .column-90 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 90%;
     min-width: 990px;
@@ -583,7 +593,7 @@ a:visited {
 .column-95 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 95%;
     min-width: 1045px;
@@ -592,7 +602,7 @@ a:visited {
 .column-100 {
     display: inline-block;
     margin: 0 auto;
-    padding: 5px 5px;
+    padding: 5px 10px;
     text-align: center;
     width: 100%;
     min-width: 1100px;
@@ -616,4 +626,29 @@ a:visited {
 
 .bold {
     font-weight: bolder;
+}
+
+.button-primary {
+    border: steelblue 1px solid;
+    background: royalblue;
+    color: white;
+    font-weight: bold;
+}
+
+.button-ok {
+    border: forestgreen 1px solid;
+    background: limegreen;
+    color: white;
+}
+
+.button-warning {
+    border: darkorange 1px solid;
+    background: orange;
+    color: white;
+}
+
+.button-danger {
+    border: #cc2f2e 1px solid;
+    background: #FF0000;
+    color: white;
 }
