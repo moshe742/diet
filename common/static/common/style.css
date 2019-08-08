@@ -395,6 +395,10 @@ input:invalid {
     border: #cc2f2e;
 }
 
+input:required {
+    content: "*";
+}
+
 button {
     padding: 7px 14px;
     margin: 10px 20px;
@@ -426,6 +430,7 @@ a:visited {
     display: block;
     margin: 0 auto;
     padding: 5px 5px;
+    color: white;
 }
 
 .column-5 {
