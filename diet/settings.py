@@ -77,12 +77,12 @@ WSGI_APPLICATION = 'diet.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'diet',
-        'USER': 'moshe',
-        'PASSWORD': os.environ['DIET_PASSWORD'],
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'diet',
+#        'USER': 'moshe',
+#        'PASSWORD': os.environ['DIET_PASSWORD'],
+#        'HOST': '127.0.0.1',
+#        'PORT': '5432',
     }
 }
 

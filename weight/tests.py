@@ -6,9 +6,9 @@ class MyTestCases(TestCase):
         self.assertEquals(1 + 1, 2)
 
     def test_sub(self):
-        self.assertEquals(2 - 1, 2)
+        self.assertEquals(2 - 1, 1)
 
-    def test_product():
+    def test_product(self):
         self.assertEquals(2 * 2, 4)
 
     def test_div(self):
