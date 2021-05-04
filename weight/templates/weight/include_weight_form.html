@@ -12,7 +12,7 @@
     </div>
     <div class="row">
         <label for="{{ form.new_weight.name }}" class="column-10 text-end">{{ form.new_weight.label_tag }}</label>
-        <input id="{{ form.new_weight.name }}" class="column-10 text-start" type="number" min="80" step="0.1" name="{{ form.new_weight.name }}" value="{{ form.new_weight.value }}">
+        <input id="{{ form.new_weight.name }}" class="column-10 text-start" type="number" min="80" max="150" step="0.1" name="{{ form.new_weight.name }}" value="{{ form.new_weight.value }}">
     </div>
     <button class="button-primary" type="submit">submit</button>
     <button class="button-warning" type="reset">reset</button>
