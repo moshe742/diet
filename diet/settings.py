@@ -20,12 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '42hfwllokh89fcv2(97m^s6c6a4ims7w%!46&!sa7!q@k#odqq'
-
+SECRET_KEY = os.environ['DJANGO_SECRET']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['moshediet.moshe742.name']
 
 
 # Application definition
@@ -77,14 +76,14 @@ WSGI_APPLICATION = 'diet.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db.sqlite',
-#        'ENGINE': 'django.db.backends.postgresql',
-#        'NAME': 'diet',
-#        'USER': 'moshe',
-#        'PASSWORD': os.environ['DIET_PASSWORD'],
-#        'HOST': '127.0.0.1',
-#        'PORT': '5432',
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': 'db.sqlite',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'diet',
+        'USER': 'moshe',
+        'PASSWORD': os.environ['DIET_PASSWORD'],
+        'HOST': '',
+        'PORT': '',
     }
 }
 
@@ -121,6 +120,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
